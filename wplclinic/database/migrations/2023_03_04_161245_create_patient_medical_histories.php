@@ -17,6 +17,7 @@ return new class extends Migration
         //     $table->id();
         //     $table->timestamps();
         // });
+        
 
 
         Schema::create('patients_medical_histories', function (Blueprint $table) {

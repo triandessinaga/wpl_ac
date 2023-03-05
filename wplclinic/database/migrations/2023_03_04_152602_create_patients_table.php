@@ -13,10 +13,26 @@ return new class extends Migration
      */
     public function up()
     {
+        // Schema::create('patients', function (Blueprint $table) {
+        //     $table->id();
+            
+        //     $table->timestamps();
+        // });
+
+       
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_lengkap');
+            $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
+            $table->date('tanggal_lahir');
+            $table->text('alamat');
+            $table->string('nomor_telepon');
+            $table->string('nomor_identitas');
             $table->timestamps();
         });
+
+
+
     }
 
     /**

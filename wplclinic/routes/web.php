@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/admin/dashboard', function () {
-    $patients = App\Models\Patient::all();
-    return view('admin.dashboard', compact('patients'));
-})->name('admin.dashboard');
+// Route::get('/admin/dashboard', function () {
+//     $patients = App\Models\Patient::all();
+//     return view('admin.dashboard', compact('patients'));
+// })->name('admin.dashboard');
+
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
